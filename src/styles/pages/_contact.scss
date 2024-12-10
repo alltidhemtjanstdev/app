@@ -1,0 +1,34 @@
+.infoSection {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 7rem;
+
+  @include mqResponsive(bp-large) {
+    grid-template-columns: 1fr;
+    max-width: 80rem;
+    margin-inline: auto;
+  }
+
+  .item {
+    display: grid;
+    align-items: center;
+
+    &:first-child {
+      div,
+      a {
+        font-size: 1.9rem;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    iframe {
+      aspect-ratio: 1.5;
+      border-radius: $default-border-radius;
+      overflow: hidden;
+      background: $color-white;
+    }
+  }
+}

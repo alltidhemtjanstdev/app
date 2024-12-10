@@ -1,0 +1,20 @@
+@import "../../styles/abstracts/variables";
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block: 5rem;
+
+  &:not(:first-of-type) {
+    border-top: 1px solid $color-grey-soft;
+  }
+
+  figure {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: $default-border-radius;
+    overflow: hidden;
+    max-width: 80rem;
+  }
+}

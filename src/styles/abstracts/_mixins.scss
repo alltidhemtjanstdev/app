@@ -1,0 +1,56 @@
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape [1200 - 1800] is where our normal styles apply
+1800px + :      Large desktop
+
+$breakpoint argument choices:
+- phone
+- tablet-portrait
+- tablet-landscape
+- lg-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin mqResponsive($breakpoint) {
+  @if $breakpoint == bp-smallest {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    } //500px small phone
+  }
+  @if $breakpoint == bp-small {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px phone
+  }
+  @if $breakpoint == bp-medium {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px tablet-portrait
+  }
+  @if $breakpoint == bp-large {
+    @media only screen and (max-width: 68.75em) {
+      @content;
+    } //1100px
+  }
+  @if $breakpoint == bp-largest {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px tablet-landscape
+  }
+  @if $breakpoint == bp-xxl {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800 large desktop
+  }
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

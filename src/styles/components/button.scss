@@ -1,0 +1,90 @@
+.button {
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10rem;
+  position: relative;
+  max-width: fit-content;
+  transition: all 0.2s;
+  white-space: nowrap;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 1rem rgba($color-black, 0.1);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &:focus {
+    outline-offset: 4px;
+    outline-width: 3px;
+  }
+}
+
+// SIZE
+.small {
+  padding-block: 0.75rem;
+  padding-inline: 3rem;
+}
+
+.medium {
+  padding-block: 1rem;
+  padding-inline: 4rem;
+}
+
+.large {
+  padding-block: 1.25rem;
+  padding-inline: 5rem;
+}
+
+// COLOR
+.primary {
+  background-color: $color-primary;
+  color: $color-white;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+
+  &:active {
+    background-color: darken($color-primary-dark, 10%);
+  }
+}
+
+.secondary {
+  background-color: $color-primary-light;
+  color: $color-primary-dark;
+
+  &:hover {
+    background-color: lighten($color-primary-light, 10%);
+  }
+
+  &:active {
+    background-color: darken($color-primary-light, 10%);
+  }
+}
+
+.cta {
+  color: white;
+  background-color: $color-accent-1;
+
+  &:hover {
+    background-color: darken($color-accent-1, 10%);
+  }
+
+  &:active {
+    background-color: darken($color-accent-1, 15%);
+  }
+}

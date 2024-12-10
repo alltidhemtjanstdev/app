@@ -1,0 +1,29 @@
+@import "../../styles/abstracts/mixins";
+
+.logoSmall {
+  display: none;
+  width: 40px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include mqResponsive(bp-smallest) {
+    display: flex;
+  }
+}
+
+.logoText {
+  display: flex;
+  max-width: 10rem;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include mqResponsive(bp-smallest) {
+    display: none;
+  }
+}

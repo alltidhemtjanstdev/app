@@ -1,0 +1,17 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.galleryList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 4rem;
+  margin-block-start: 6.5rem;
+
+  &.singleItem {
+    grid-template-columns: 40rem;
+
+    @include mqResponsive(bp-smallest) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

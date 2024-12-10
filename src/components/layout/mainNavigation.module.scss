@@ -1,0 +1,73 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/abstracts/mixins";
+
+.header {
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav {
+    .mobileMenu {
+      display: none;
+
+      @include mqResponsive(bp-medium) {
+        display: block;
+      }
+    }
+
+    .navList {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      max-width: unset;
+
+      @include mqResponsive(bp-medium) {
+        display: none;
+      }
+
+      .navItem {
+        position: relative;
+        padding: 0.3rem 0;
+        margin: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        :hover,
+        .active {
+          color: $color-primary-dark;
+        }
+
+        :hover:before,
+        .active:before {
+          color: $color-primary-dark;
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+        }
+
+        :before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: $color-primary-dark;
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+        }
+      }
+    }
+  }
+}

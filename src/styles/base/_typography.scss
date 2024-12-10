@@ -1,0 +1,56 @@
+body {
+  font-size: $default-font-size;
+  font-weight: 400;
+  color: $color-grey-dark-3;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+a,
+blockquote {
+  // width: 100%;
+  // max-width: 65ch;
+  max-width: 80rem;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2 {
+  font-size: 3rem;
+  margin-block-end: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5,
+h6,
+p,
+ul,
+ol,
+a {
+  font-size: 1.6rem;
+
+  // This was added to fix the issue of the font being too small at this
+  // breakpoint due to the size set on the HTML element in the base file.
+  @include mqResponsive(bp-medium) {
+    font-size: 1.8rem;
+  }
+}

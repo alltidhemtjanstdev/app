@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  // This defines what 1rem is
+  font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
+
+  @include mqResponsive(bp-largest) {
+    // width < 1200?
+    font-size: 56.25%; //1rem = 9px, 9/16 = 50%
+  }
+
+  @include mqResponsive(bp-medium) {
+    // width < 900?
+    font-size: 50%; //1rem = 8px, 8/16 = 50%
+  }
+
+  @include mqResponsive(bp-xxl) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: $color-accent-2;
+  color: $color-black;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+section {
+  padding-block: 10rem;
+
+  &:first-of-type {
+    margin-block: 0;
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+.container {
+  padding-inline: 2rem;
+}
+
+.custom-list-disc {
+  list-style-type: disc;
+}
+
+.custom-list-disc li::marker {
+  color: $color-primary;
+}
+
+.bg-accent-light {
+  background-color: rgba($color: #f2c6f1, $alpha: 20%);
+}
+
+.link {
+  color: $color-primary-dark;
+  text-decoration: underline;
+}
+
+.logo {
+  color: $color-primary;
+}
+
+.date {
+  color: $color-grey-dark-1;
+  font-size: $date-font-size;
+  font-style: italic;
+}

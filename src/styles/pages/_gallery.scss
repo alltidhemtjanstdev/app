@@ -1,0 +1,29 @@
+.gallery {
+  max-width: 80rem;
+  margin-inline: auto;
+  margin-block: 10rem;
+
+  &__description {
+    margin-block-end: 2rem;
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-gap: 1rem;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: $default-border-radius;
+    overflow: hidden;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}

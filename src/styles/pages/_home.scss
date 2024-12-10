@@ -1,0 +1,51 @@
+.section-1 {
+  position: relative;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.3),
+      rgba($color-primary-dark, 0.3)
+    ),
+    url("/images/hero-i.jpg");
+  background-size: cover;
+  background-position: center;
+  max-height: 524px;
+  width: 100%;
+  aspect-ratio: 16/9;
+
+  &__content {
+    @include absoluteCenter;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mqResponsive(bp-small) {
+      position: relative;
+      top: initial;
+      left: initial;
+      transform: none;
+      width: 90%;
+      margin-inline: auto;
+    }
+
+    h1 {
+      font-size: 5rem;
+      color: $color-white;
+      font-weight: 500;
+      text-shadow: 3px 3px 5px $color-grey-dark;
+    }
+  }
+}
+
+.section-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
