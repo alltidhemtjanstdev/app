@@ -10,10 +10,17 @@
   }
 
   .item {
-    display: grid;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &:first-child {
+      div:first-of-type:not(:first-child) {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
       div,
       a {
         font-size: 1.9rem;

@@ -27,7 +27,7 @@ const HeadingAndText: React.FC<HeadingAndTextProps> = ({
           href={contactPageLink.href}
           variant="cta"
           size="medium"
-          className="ml-auto mt-6"
+          className="ml-auto mt-10"
         >
           {contactPageLink.text}
         </Button>

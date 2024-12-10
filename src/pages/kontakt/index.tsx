@@ -55,42 +55,43 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
           <div className="infoSection">
             <div className="item">
               <h2>Kontaktuppgifter</h2>
-
-              <div className="flex flex-col">
-                <strong>Telefon:</strong>
-                <a href={`tel:${phone}`}>{phone}</a>
-              </div>
-
-              <div className="flex flex-col">
-                <strong>E-post:</strong>
-                <a href={`mailto:${email}`}>{email}</a>
-              </div>
-
               <div>
-                <strong>Adress:</strong>
-                <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                    address
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <address className="flex flex-col">
-                    <span>{street}</span>
-                    <span>
-                      {postNumber} {municipality}
-                    </span>
-                  </address>
-                </a>
-              </div>
-
-              {days && time && (
                 <div className="flex flex-col">
-                  <strong>Öppettider:</strong>
-                  <span>{days}</span>
-                  <span>{time}</span>
+                  <strong>Telefon:</strong>
+                  <a href={`tel:${phone}`}>{phone}</a>
                 </div>
-              )}
+
+                <div className="flex flex-col">
+                  <strong>E-post:</strong>
+                  <a href={`mailto:${email}`}>{email}</a>
+                </div>
+
+                <div>
+                  <strong>Adress:</strong>
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                      address
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <address className="flex flex-col">
+                      <span>{street}</span>
+                      <span>
+                        {postNumber} {municipality}
+                      </span>
+                    </address>
+                  </a>
+                </div>
+
+                {days && time && (
+                  <div className="flex flex-col">
+                    <strong>Öppettider:</strong>
+                    <span>{days}</span>
+                    <span>{time}</span>
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className="item">
