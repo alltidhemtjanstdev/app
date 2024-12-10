@@ -99,13 +99,15 @@ const Footer: React.FC = () => {
                 </address>
               </a>
             </div>
-            <div className={styles.contactItem}>
-              <Clock strokeWidth={1} />
-              <div className="flex flex-col">
-                <span>{days}</span>
-                <span>{time}</span>
+            {days && time && (
+              <div className={styles.contactItem}>
+                <Clock strokeWidth={1} />
+                <div className="flex flex-col">
+                  <span>{days}</span>
+                  <span>{time}</span>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
 

@@ -84,11 +84,13 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
                 </a>
               </div>
 
-              <div className="flex flex-col">
-                <strong>Öppettider:</strong>
-                <span>{days}</span>
-                <span>{time}</span>
-              </div>
+              {days && time && (
+                <div className="flex flex-col">
+                  <strong>Öppettider:</strong>
+                  <span>{days}</span>
+                  <span>{time}</span>
+                </div>
+              )}
             </div>
 
             <div className="item">

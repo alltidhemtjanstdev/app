@@ -12,8 +12,8 @@ export const useContactInfo = () => {
 
   const address = `${street}, ${postNumber} ${municipality}`;
 
-  const days = contactInfoData?.openingHours?.days || "Måndag - Fredag";
-  const time = contactInfoData?.openingHours?.time || "09:00 - 15:00";
+  const days = contactInfoData?.openingHours?.days;
+  const time = contactInfoData?.openingHours?.time;
 
   return {
     address,
