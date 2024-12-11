@@ -1,6 +1,8 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
+// This import works in the development environment but causes a build error during deployment on Vercel.
+// Commenting out to prevent issues with the Vercel build process.
+// import { visionTool } from '@sanity/vision';
 import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
@@ -10,7 +12,7 @@ export default defineConfig({
   projectId: 'jp5u5q8y',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [structureTool()],
 
   schema: {
     types: schemaTypes,
