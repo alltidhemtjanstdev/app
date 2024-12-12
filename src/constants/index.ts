@@ -1,6 +1,6 @@
 export * from "./nav-links";
 
-export const BRAND_NAME = "alltid hemtjänst";
+export const BRAND_NAME = "Alltid hemtjänst och service";
 export const PHONE = "0812345678";
 export const EMAIL = "info@alltidhemtjanst.se";
 

@@ -19,6 +19,7 @@ const GalleryImageModal: React.FC<ModalProps> = ({ image }) => {
         className="gallery__image-wrapper"
       >
         <ResponsiveImage image={image} loading="lazy" />
+        <span className="sr-only">Visa bild</span>
       </button>
 
       <Dialog
@@ -36,6 +37,7 @@ const GalleryImageModal: React.FC<ModalProps> = ({ image }) => {
               className="absolute top-4 right-4 p-2 rounded-full text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white"
             >
               <X className="w-10 h-10" />
+              <span className="sr-only">Stäng bild</span>
             </button>
             <div className="relative object-contain w-full h-full">
               <ResponsiveImage

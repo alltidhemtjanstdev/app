@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import styles from "./logo.module.scss";
-import { BRAND_NAME } from "@/constants";
 
 type LogoProps = {
   logoWhite?: boolean;
@@ -10,10 +9,7 @@ type LogoProps = {
 const Logo: React.FC<LogoProps> = ({ logoWhite = false }) => {
   return (
     <>
-      <span
-        aria-label={BRAND_NAME}
-        className={classNames("logo", styles.logoSmall)}
-      >
+      <span className={classNames("logo", styles.logoSmall)}>
         <svg
           width="105"
           height="105"
@@ -25,10 +21,7 @@ const Logo: React.FC<LogoProps> = ({ logoWhite = false }) => {
         </svg>
       </span>
 
-      <span
-        aria-label={BRAND_NAME}
-        className={classNames("logo", styles.logoText)}
-      >
+      <span className={classNames("logo", styles.logoText)}>
         <svg
           width="430"
           height="201"

@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
             styles.contactInfo
           )}
         >
-          <h4>Kontaktinfo</h4>
+          <h3>Kontaktinfo</h3>
           <div className={styles.contactItems}>
             <div className={styles.contactItem}>
               <Phone strokeWidth={1} />
@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="sm:col-start-11 sm:col-span-2">
-          <h4>Meny</h4>
+          <h3>Meny</h3>
           <nav>
             <ul className={styles.navList}>
               {filteredNavLinks.map((link) => (

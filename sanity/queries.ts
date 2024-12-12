@@ -9,7 +9,8 @@ const imageFields = `
           height
         }
       }
-    }
+    },
+    altText
   }
 `;
 

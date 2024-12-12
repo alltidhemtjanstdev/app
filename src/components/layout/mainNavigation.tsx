@@ -6,7 +6,7 @@ import { useAppData } from "@/context/AppDataContext";
 import classNames from "classnames";
 import Logo from "./logo";
 import styles from "./mainNavigation.module.scss";
-import { HOME_PAGE_PATH, navLinks } from "@/constants";
+import { BRAND_NAME, HOME_PAGE_PATH, navLinks } from "@/constants";
 
 const MainNavigation: React.FC = () => {
   const router = useRouter();
@@ -22,6 +22,7 @@ const MainNavigation: React.FC = () => {
     <header className={classNames(styles.header, "container mx-auto")}>
       <Link href={HOME_PAGE_PATH}>
         <Logo />
+        <span className="sr-only">{BRAND_NAME + "logo"}</span>
       </Link>
 
       <nav className={styles.nav}>
@@ -45,9 +46,15 @@ const MainNavigation: React.FC = () => {
               <>
                 <MenuButton className="inline-flex justify-center items-center p-2">
                   {open ? (
-                    <X className="w-10 h-10" aria-hidden="true" />
+                    <>
+                      <X className="w-10 h-10" aria-hidden="true" />
+                      <span className="sr-only">Stäng mobile meny</span>
+                    </>
                   ) : (
-                    <MenuIcon className="w-10 h-10" aria-hidden="true" />
+                    <>
+                      <MenuIcon className="w-10 h-10" aria-hidden="true" />
+                      <span className="sr-only">Öppna mobile meny</span>
+                    </>
                   )}
                 </MenuButton>
 
