@@ -3,7 +3,7 @@ import { useAppData } from "@/context/AppDataContext";
 export const useContactInfo = () => {
   const { contactInfoData } = useAppData();
 
-  const street = contactInfoData?.address?.street || "Nykroppagatan 23";
+  const street = contactInfoData?.address?.street || "Nykroppagatan 25";
   const postNumber = contactInfoData?.address?.postNumber || "123 32";
   const municipality = contactInfoData?.address?.municipality || "Farsta";
 
