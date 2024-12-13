@@ -77,15 +77,7 @@
 }
 
 .cta {
-  color: $color-black;
-  background-color: $color-accent-1;
-  font-weight: 400;
-
-  &:hover {
-    background-color: darken($color-accent-1, 10%);
-  }
-
-  &:active {
-    background-color: lighten($color-accent-1, 15%);
-  }
+  color: $color-white;
+  font-weight: 700;
+  background-color: darken($color-accent-1, 15%);
 }
