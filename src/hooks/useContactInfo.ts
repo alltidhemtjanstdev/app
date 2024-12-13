@@ -7,8 +7,8 @@ export const useContactInfo = () => {
   const postNumber = contactInfoData?.address?.postNumber || "123 32";
   const municipality = contactInfoData?.address?.municipality || "Farsta";
 
-  const phone = contactInfoData?.phone || "0812345678";
-  const email = contactInfoData?.email || "info@alltidhemtjanst.se";
+  const phone = contactInfoData?.phone || "086243555";
+  const email = contactInfoData?.email || "alltidhemtjanst@yahoo.se";
 
   const address = `${street}, ${postNumber} ${municipality}`;
 
