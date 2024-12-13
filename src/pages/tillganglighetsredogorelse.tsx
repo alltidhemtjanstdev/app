@@ -11,20 +11,14 @@ const AccessibilityStatement = () => {
           Tillgänglighetsredogörelse
         </h1>
         <div className="mb-10">
-          <h2>Vårt åtagande</h2>
+          <h2>Webbplatsens tillgänglighet</h2>
           <p>
-            Vi strävar efter att göra vår webbplats tillgänglig för alla,
-            inklusive personer med funktionsnedsättning. Vårt mål är att erbjuda
-            en användarvänlig upplevelse som möter alla besökares behov.
-          </p>
-        </div>
-        <div className="mb-10">
-          <h2>Standarder vi följer</h2>
-          <p>
-            Denna webbplats försöker uppfylla WCAG 2.1 (Web Content
-            Accessibility Guidelines) på nivå AA. Dessa riktlinjer säkerställer
-            att vårt innehåll är begripligt, hanterbart, tillgängligt och
-            robust.
+            Webbplatsen Alltid Hemtjänst strävar efter att följa nivå AA i
+            standarden Web Content Accessibility Guidelines (WCAG) 2.1. Vi
+            arbetar kontinuerligt med att förbättra tillgängligheten och strävar
+            efter att göra vår webbplats så användarvänlig som möjligt för alla
+            besökare. Nedan beskrivs vilka delar av webbplatsen som inte är
+            fullt tillgängliga.
           </p>
         </div>
         <div className="mb-10">
