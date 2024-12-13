@@ -70,6 +70,9 @@ const AccessibilityStatement = () => {
             </li>
           </ul>
         </div>
+        <p className="date">
+          Uptaterad den <time>13 december 2024</time>
+        </p>
       </section>
     </>
   );
