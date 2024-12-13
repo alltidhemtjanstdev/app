@@ -1,0 +1,19 @@
+@import "../../styles/abstracts/variables";
+
+.skipLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $color-primary-dark;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+  box-shadow: 0 0 4px #000;
+}

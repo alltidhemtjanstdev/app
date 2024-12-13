@@ -43,7 +43,7 @@ const HomeCarePage: React.FC<HomeCarePageProps> = ({ data }) => {
       <motion.div {...fadeInAnimation}>
         {image && <HeroImage image={image} />}
         {descriptionSection && (
-          <TextSection section={descriptionSection} HeadingEl="h2" />
+          <TextSection section={descriptionSection} HeadingEl="h1" />
         )}
         {personalizedCareSection && (
           <ImageTextSection

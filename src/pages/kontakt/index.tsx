@@ -99,6 +99,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
                 src={`https://www.google.com/maps?q=${encodeURIComponent(
                   address
                 )}&output=embed`}
+                title={`Karta som visar platsen för ${address ? address : "Nykroppagatan 23, 123 32 Farsta."}`}
                 width="100%"
                 height="100%"
                 allowFullScreen
