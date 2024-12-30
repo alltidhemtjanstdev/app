@@ -6,3 +6,10 @@
 .swiper-button-next {
   color: $color-primary-dark !important;
 }
+
+.carousel-modal {
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $color-white !important;
+  }
+}
