@@ -1,6 +1,7 @@
 const imageFields = `
-  "image": image{
-    asset->{
+  "image": image {
+    ...,
+    asset-> {
       _id,
       url,
       metadata {
@@ -28,7 +29,8 @@ const gallery = `
   title,
   description,
   galleryImages[]{
-    asset->{
+   ...,
+   asset->{
       _id,
       url,
       metadata {

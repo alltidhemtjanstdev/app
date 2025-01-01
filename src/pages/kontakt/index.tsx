@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { sanityClient } from "../../../sanity";
 import { contactPageQuery } from "../../../sanity/queries";
-import { HeadingAndTextIn, SanityImageIn } from "@/types";
+import { CustomSanityImageSource, HeadingAndTextIn } from "@/types";
 import { fadeInAnimation } from "@/utils/animations";
 import SeoData from "@/components/seoData";
 import TextSection from "@/components/pageSections/textSection";
@@ -13,7 +13,7 @@ import { useContactInfo } from "@/hooks/useContactInfo";
 export type ContactPageData = {
   _id: string;
   pageTitle?: string;
-  image?: SanityImageIn;
+  image?: CustomSanityImageSource;
   descriptionSection?: HeadingAndTextIn;
 };
 

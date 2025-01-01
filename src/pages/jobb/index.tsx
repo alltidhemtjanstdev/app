@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { sanityClient } from "../../../sanity";
 import { workPageQuery } from "../../../sanity/queries";
-import { SanityImageIn, HeadingAndTextIn } from "@/types";
+import { HeadingAndTextIn, CustomSanityImageSource } from "@/types";
 import { fadeInAnimation } from "@/utils/animations";
 import SeoData from "@/components/seoData";
 import HeroImage from "@/components/pageSections/heroImage";
@@ -12,7 +12,7 @@ import TextSection from "@/components/pageSections/textSection";
 export type WorkPageData = {
   _id: string;
   pageTitle: string;
-  image: SanityImageIn;
+  image: CustomSanityImageSource;
   descriptionSection: HeadingAndTextIn;
 };
 

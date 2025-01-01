@@ -1,7 +1,7 @@
-import { SanityImageIn } from "./cms";
+import { CustomSanityImageSource } from "./cms";
 
 export interface PersonIn {
-  image?: SanityImageIn;
+  image?: CustomSanityImageSource;
   name?: string;
   description?: string;
 }

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { urlFor } from "../../sanity";
-import { SanityImageIn } from "@/types";
+import { CustomSanityImageSource } from "@/types/cms";
 
 const ResponsiveImage: React.FC<{
-  image: SanityImageIn;
+  image: CustomSanityImageSource;
   priority?: boolean;
   loading?: "eager" | "lazy";
   className?: string;
@@ -15,10 +15,15 @@ const ResponsiveImage: React.FC<{
   sizes = "(max-width: 768px) 100vw, 50vw",
   loading,
 }) => {
-  if (!image?.asset?.metadata?.dimensions) return null;
+  const hotspotX = image.hotspot?.x ?? 0.5;
+  const hotspotY = image.hotspot?.y ?? 0.5;
 
-  const { width, height } = image.asset.metadata.dimensions;
-  const imageUrl = urlFor(image).width(width).height(height).quality(75).url();
+  const imageUrl = urlFor(image)
+    .auto("format")
+    .fit("crop")
+    .focalPoint(hotspotX || 0.5, hotspotY || 0.5)
+    .quality(75)
+    .url();
 
   return (
     <Image
@@ -29,6 +34,7 @@ const ResponsiveImage: React.FC<{
       priority={priority}
       loading={loading}
       className={className}
+      objectPosition={`${hotspotX * 100 || 50}% ${hotspotY * 100 || 50}%`}
     />
   );
 };

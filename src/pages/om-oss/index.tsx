@@ -6,9 +6,9 @@ import {
   HeadingAndTextIn,
   PersonIn,
   ImageAndTextIn,
-  SanityImageIn,
   PdfFileIn,
   TestimonialIn,
+  CustomSanityImageSource,
 } from "@/types";
 import { fadeInAnimation } from "@/utils/animations";
 import SeoData from "@/components/seoData";
@@ -21,7 +21,7 @@ import ImageTextSection from "@/components/pageSections/imageTextSection";
 export type AboutPageData = {
   _id: string;
   pageTitle?: string;
-  image?: SanityImageIn;
+  image?: CustomSanityImageSource;
   descriptionSection?: {
     text?: HeadingAndTextIn;
     person?: PersonIn;

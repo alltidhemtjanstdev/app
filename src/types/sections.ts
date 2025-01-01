@@ -1,8 +1,8 @@
-import { SanityImageIn } from "./cms";
+import { CustomSanityImageSource } from "./cms";
 import { PortableTextContent } from "./portableText";
 
 export interface ImageAndTextIn {
-  image?: SanityImageIn;
+  image?: CustomSanityImageSource;
   text?: HeadingAndTextIn;
 }
 

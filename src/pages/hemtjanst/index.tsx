@@ -3,7 +3,11 @@ import { motion } from "framer-motion";
 
 import { sanityClient } from "../../../sanity";
 import { homeCarePageQuery } from "../../../sanity/queries";
-import { ImageAndTextIn, HeadingAndTextIn, SanityImageIn } from "@/types";
+import {
+  ImageAndTextIn,
+  HeadingAndTextIn,
+  CustomSanityImageSource,
+} from "@/types";
 import { fadeInAnimation } from "@/utils/animations";
 import SeoData from "@/components/seoData";
 import HeroImage from "@/components/pageSections/heroImage";
@@ -13,7 +17,7 @@ import ImageTextSection from "@/components/pageSections/imageTextSection";
 export type HomeCarePageData = {
   _id: string;
   pageTitle?: string;
-  image?: SanityImageIn;
+  image?: CustomSanityImageSource;
   personalizedCareSection?: ImageAndTextIn;
   descriptionSection?: HeadingAndTextIn;
   servicesSection?: HeadingAndTextIn;

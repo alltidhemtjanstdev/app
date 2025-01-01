@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { X } from "react-feather";
 import ResponsiveImage from "../responsiveImage";
-import { SanityImageIn } from "@/types";
+import { CustomSanityImageSource } from "@/types";
 
 export type ModalProps = {
-  image: SanityImageIn;
+  image: CustomSanityImageSource;
 };
 
 const GalleryImageModal: React.FC<ModalProps> = ({ image }) => {

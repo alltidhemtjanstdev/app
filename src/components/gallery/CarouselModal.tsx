@@ -7,10 +7,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { X } from "react-feather";
 import ResponsiveImage from "../responsiveImage";
+import { CustomSanityImageSource } from "@/types";
 
 type CarouselModalProps = {
   title: string;
-  images: Array<{ asset: { _id: string; url: string } }>;
+  images: CustomSanityImageSource[];
   initialIndex: number;
   isOpen: boolean;
   onClose: () => void;
@@ -46,7 +47,7 @@ const CarouselModal: React.FC<CarouselModalProps> = ({
             className="h-[85%] my-20 carousel-modal"
           >
             {images.map((image) => (
-              <SwiperSlide key={image.asset._id} className="">
+              <SwiperSlide key={image._id}>
                 {title && (
                   <h1 className="text-white mx-auto text-center">{title}</h1>
                 )}
