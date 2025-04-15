@@ -24,7 +24,32 @@ export const Gallery = {
       name: 'galleryImages',
       title: 'Bilder',
       type: 'array',
-      of: [{type: 'extendedImage'}],
+      of: [
+        {
+          name: 'extendedGalleriImage',
+          title: 'Image',
+          type: 'image',
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: 'altText',
+              title: 'Alt text for image',
+              type: 'string',
+              description:
+                'Alt-text (alternativ text) beskriver bilder för personer med synnedsättningar och hjälper sökmotorer. Lämna tomt om ingen beskrivning behövs.',
+            },
+            {
+              name: 'caption',
+              title: 'Caption (valfritt)',
+              type: 'string',
+              description:
+                'Används för att lägga till en bildbeskrivning under varje bild i modalen.',
+            },
+          ],
+        },
+      ],
     },
   ],
 }
