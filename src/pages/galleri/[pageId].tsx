@@ -5,12 +5,15 @@ import { galleryByIdQuery } from "../../../sanity/queries";
 import ResponsiveImage from "@/components/responsiveImage";
 import CarouselModal from "@/components/gallery/CarouselModal";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { ArrowLeft } from "react-feather";
 
 export type GalleryPageProps = {
   data: GalleryIn | null;
 };
 
 const GalleryPage: React.FC<GalleryPageProps> = ({ data }) => {
+  const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -36,8 +39,16 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ data }) => {
     setIsModalOpen(false);
   };
 
+  const handleGoBack = () => {
+    router.back();
+  };
+
   return (
     <article className="container gallery">
+      <button onClick={handleGoBack} className="flex items-center mb-4">
+        <ArrowLeft className="w-8 h-8 mr-2" strokeWidth={1} />
+        Tillbaka
+      </button>
       {title && <h1>{title}</h1>}
       {description && <p className="gallery__description">{description}</p>}
       {galleryImages && galleryImages.length > 0 && (
