@@ -18,7 +18,6 @@ type CarouselModalProps = {
 };
 
 const CarouselModal: React.FC<CarouselModalProps> = ({
-  title,
   images,
   initialIndex,
   isOpen,
@@ -48,8 +47,10 @@ const CarouselModal: React.FC<CarouselModalProps> = ({
           >
             {images.map((image) => (
               <SwiperSlide key={image._id}>
-                {title && (
-                  <h1 className="text-white mx-auto text-center">{title}</h1>
+                {image.caption && (
+                  <h1 className="text-white mx-auto text-center">
+                    {image.caption}
+                  </h1>
                 )}
                 <div className="relative w-full h-full object-contain">
                   <ResponsiveImage

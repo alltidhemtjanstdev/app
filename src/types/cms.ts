@@ -13,4 +13,5 @@ export type CustomSanityImageSource = SanityImageObject & {
     right: number;
   };
   altText?: string;
+  caption?: string;
 };
