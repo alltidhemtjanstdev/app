@@ -56,7 +56,7 @@ const GalleryPage: React.FC<GalleryPageProps> = ({ data }) => {
           {galleryImages.map((image, index) => {
             return (
               <button
-                key={image._id}
+                key={`${image._id}-${index}`}
                 onClick={() => openModal(index)}
                 className="gallery__image-wrapper"
               >

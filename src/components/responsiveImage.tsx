@@ -34,7 +34,9 @@ const ResponsiveImage: React.FC<{
       priority={priority}
       loading={loading}
       className={className}
-      objectPosition={`${hotspotX * 100 || 50}% ${hotspotY * 100 || 50}%`}
+      style={{
+        objectPosition: `${hotspotX * 100 || 50}% ${hotspotY * 100 || 50}%`,
+      }}
     />
   );
 };

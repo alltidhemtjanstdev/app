@@ -45,8 +45,8 @@ const CarouselModal: React.FC<CarouselModalProps> = ({
             initialSlide={initialIndex}
             className="h-[85%] my-20 carousel-modal"
           >
-            {images.map((image) => (
-              <SwiperSlide key={image._id}>
+            {images.map((image, index) => (
+              <SwiperSlide key={`${image._id}-${index}`}>
                 {image.caption && (
                   <h1 className="text-white mx-auto text-center">
                     {image.caption}
